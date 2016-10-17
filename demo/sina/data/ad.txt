@@ -1,0 +1,29 @@
+﻿{
+    ads_top: [
+
+    			{title:'水岸私邸盛世开园',href:'#'},
+    			{title:'朝阳北五环新别墅',href:'#'},
+    			{title:'路劲地产外资第一',href:'#'},
+    			{title:'5万大奖征集路名',href:'#'},
+    			{title:'鲁能三亚湾',href:'#'},
+    			{title:'意式设计舒适沐浴',href:'#'},
+    			{title:'4月沪打折盘收罗',href:'#'},
+    			{title:'买房置业一点就通',href:'#'},
+    		],
+    	ads_bottom:[
+
+    			{title:'独家图解看房大全',href:'#'},
+    			{title:'抄底热盘打折汇总',href:'#'},
+    			{title:'户型大全货比三家',href:'#'},
+    			{title:'E房周刊新视角',href:'#'},
+    			{title:'房企年报曝潜力股',href:'#'},
+    			{title:'房企内幕一网打尽',href:'#'},
+    			{title:'听楼市那些新鲜事',href:'#'},
+    			{title:'刚需房开盘早知道',href:'#'},
+    		],
+    	image:['ads.jpg']
+}
+
+{
+
+}

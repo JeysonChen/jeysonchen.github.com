@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="author" content="智能社 - zhinengshe.com">
+<meta name="copyright" content="智能社 - zhinengshe.com">
+<title>智能社 - www.zhinengshe.com</title>
+<style>
+* { margin:0; padding:0; }
+div { position:relative; width:480px; height:40px; border:1px solid #999; margin:50px auto; }
+input { position:absolute; top:0; left:0; outline:none;  border:none; width:470px; padding:0 5px; height:100%; font-size:16px;}
+ul { display:none; position:absolute; top:40px; left:-1px; width:100%; border:1px solid #999; }
+li { list-style:none; padding-left:20px; height:35px; line-height:35px; }
+li:hover, .active { background:#eee; }
+</style>
+<script src="jsonp.js"></script>
+<script>
+window.onload=function (){
+	var oT=document.getElementById('t1');
+	var oUl=document.getElementById('ul1');
+	var aLi=oUl.children;
+	var n=-1;
+	var oldValue='';
+	var URL='https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su';
+
+	oT.onkeydown=function (ev){
+		var oEvent=ev || event;
+		if (oEvent.keyCode == 40)
+		{
+			// 下
+			n++;
+			
+			if (n == aLi.length)
+			{
+				n=-1;
+				for (var i=0; i<aLi.length; i++)
+				{
+					aLi[i].className='';
+				}
+				oT.value=oldValue;
+			}
+			else
+			{
+				for (var i=0; i<aLi.length; i++)
+				{
+					aLi[i].className='';
+				}
+				aLi[n].className='active';
+				oT.value=aLi[n].innerHTML;
+			}
+
+			document.title=n;
+		}
+		else if (oEvent.keyCode == 13)
+		{
+			window.open('https://www.baidu.com/s?wd='+oT.value+'&rsv_spt=1&rsv_iqid=0xf63625ab00021234&issp=1&f=8&rsv_bp=0&rsv_idx=2&ie=utf-8&tn=baiduhome_pg&rsv_enter=1&rsv_sug3=4&rsv_sug1=4&rsv_sug7=101&rsv_sug2=0&inputT=1049&rsv_sug4=1296', '_self');
+		}
+	};
+
+	oT.onkeyup=function (ev){
+		var oEvent=ev || event;
+		if (this.value == '')
+		{
+			oUl.style.display='none';
+			return ;
+		}
+		
+		if (oEvent.keyCode==40 || oEvent.keyCode==38)
+		{
+			return false;
+		}
+		
+		oldValue=this.value;
+		jsonp({
+			url:URL,
+			data:{'wd':this.value},
+			success:function (json){
+				var arr=json.s;
+				if (arr.length == 0)
+				{
+					oUl.style.display='none';
+				}
+				else
+				{
+					oUl.style.display='block';
+				}
+				oUl.innerHTML='';
+				for (var i=0; i<arr.length; i++)
+				{
+					var oLi=document.createElement('li');
+					oLi.innerHTML=arr[i];
+					oUl.appendChild(oLi);
+				}
+			}
+		});
+	};
+};
+</script>
+</head>
+
+<body>
+	<div>
+		<input type="text" id="t1" />
+		<ul id="ul1"></ul>
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+

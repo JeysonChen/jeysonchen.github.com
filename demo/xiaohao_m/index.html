@@ -1,0 +1,171 @@
+﻿<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,user-scalable=no,initial-scale=1.0">
+<meta name="keywords" content="">
+<meta name="description" content="">
+<meta name="format-detection" content="telephone=no">
+<meta name="format-detection" content="email=no">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-status-bar-style" content="black">
+<link href="css/css.css" rel="stylesheet" type="text/css" />
+<link href="css/swiper.min.css" rel="stylesheet" type="text/css" />
+<link href="css/animate.css" rel="stylesheet" type="text/css" />
+<title>无标题文档</title>
+
+<script src="js/zepto.min.js"></script>
+<script src="js/swiper.min.js"></script>
+<script src="js/swiper.animate.min.js"></script>
+
+<script>
+
+   
+</script>
+
+</head>
+
+<body>
+<script>
+(function(global){
+	function remChange(){
+		document.documentElement.style.fontSize=20*document.documentElement.clientWidth/375+'px';
+	}
+	remChange();
+	global.addEventListener('resize',remChange,false);
+})(window);
+</script>
+<div class="swiper-container">
+	<div class="swiper-wrapper">
+        
+            <!--page1-->
+            <div class="page page1 swiper-slide swipe-lazy">
+                <header>
+                    <h4 class="ani" swiper-animate-effect="shake" swiper-animate-duration="1s" swiper-animate-delay="0s"><span class="title">我的生活</span></h4>
+                </header>
+                <section class="main">
+                    <p class="print ani" swiper-animate-effect="zoomIn" swiper-animate-duration="1.5s" swiper-animate-delay="1s">号码泄露，让我总是接到陌生电话，好忧桑...</p>
+                    <section class="hot_area">
+                        <div class="hot_pep ani" id="hot_pep" swiper-animate-duration="0.5s" swiper-animate-delay="0s" ></div>
+                    </section>
+                </section>
+                <footer>
+                    <div class="main_pep ani" swiper-animate-duration="0.5s" swiper-animate-delay="0s"></div>
+                    <div class="shadow_pep ani" swiper-animate-effect="zoomIn" swiper-animate-duration="0.5s" swiper-animate-delay="0s"></div>
+                    <p class="arrow"><span></span></p>
+                </footer>
+                
+            </div>
+            
+            <!--         page2          --><!--  -->
+            <div class="page page2 swiper-slide swipe-lazy">
+                <section class="page_cont">
+                    <p class="ani print print_change" swiper-animate-effect="zoomIn" swiper-animate-duration="0.5s" swiper-animate-delay="0.5s">就在这一天 我遇见了小号 ...</p>
+                    <div class="phone">
+                        <div class="signal ani" swiper-animate-effect="zoomIn" swiper-animate-duration="1.5s" swiper-animate-delay="2s"></div>
+                        <div class="img_area">
+                            <div class="phone_img ani" swiper-animate-effect="zoomIn" swiper-animate-duration="1.5s" swiper-animate-delay="2s">
+                                <div class="phone_screen">
+                                    <div class="small_num"></div>
+                                </div>
+                                
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <footer>
+                    <p class="arrow"><span></span></p>
+                </footer>
+            </div>
+            
+            
+            <div class="page page3 swiper-slide">
+                <section class="ani page_cont" swiper-animate-effect="zoomIn" swiper-animate-duration="1.5s" swiper-animate-delay="0s">
+                    <p class="print">大部分的生活需要，我都使用小号</p>
+                    <p class="print  print_change1">安全、放心</p>
+                    <p class="print">全面保护隐私棒棒哒~</p>
+                </section>
+                <section class="page3_img" >
+                    <div class="img_side ani" swiper-animate-effect="bounceOut" swiper-animate-duration="1.5s" swiper-animate-delay="2s">
+                        
+                    </div>
+                    <div class="motor ani" swiper-animate-effect="zoomIn" swiper-animate-duration="1.5s" swiper-animate-delay="0s"></div>
+                </section>
+                <footer>
+                    <p class="arrow"><span></span></p>
+                </footer>
+            </div>
+            
+            <!--********page4*********-->
+            <div class="page page4 swiper-slide">
+                <section class="ani page_cont" swiper-animate-effect="bounce" swiper-animate-duration="1.5s" swiper-animate-delay="0s">
+                    <p class="print print_change1">真正拒绝骚扰</p>
+                    <p class="print">再也不担心会接到那些烦人的电话拉  哦耶</p>
+                    
+                </section>
+                <section class="ani real_img">
+                    <div class="real_pep ani" swiper-animate-effect="pulse" swiper-animate-duration="1s" swiper-animate-delay="1s"></div>
+                </section>
+                <footer>
+                    <p class="arrow"><span></span></p>
+                </footer>
+            </div>
+            
+            <div class="page page5 swiper-slide">
+                <header>
+                    <div class="ani small_numImg" swiper-animate-effect="zoomIn" swiper-animate-duration="1.5s" swiper-animate-delay="0s"></div>
+                    <p class="ani print" swiper-animate-effect="wobble" swiper-animate-duration="1.5s" swiper-animate-delay="0.5s" >为您的隐私保驾护航</p>
+                </header>
+                <footer>
+                    <p class="arrow"><span></span></p>
+                </footer>
+            </div>
+        
+	</div>        
+</div>
+<script>
+ var mySwiper = new Swiper ('.swiper-container', {
+   direction : 'vertical',
+   mousewheelControl : true,
+   onInit: function(swiper){
+   swiperAnimateCache(swiper);
+   swiperAnimate(swiper);
+	  },
+   onSlideChangeEnd: function(swiper){
+	swiperAnimate(swiper);
+    },
+	onTransitionEnd: function(swiper){
+	swiperAnimate(swiper);
+    },
+	
+	
+	watchSlidesProgress: true,
+
+      onProgress: function(swiper){
+        for (var i = 0; i < swiper.slides.length; i++){
+          var slide = swiper.slides[i];
+          var progress = slide.progress;
+          var translate = progress*swiper.height/4;  
+		  scale = 1 - Math.min(Math.abs(progress * 0.5), 1);
+          var opacity = 1 - Math.min(Math.abs(progress/2),0.5);
+          slide.style.opacity = opacity;
+		  es = slide.style;
+		  es.webkitTransform = es.MsTransform = es.msTransform = es.MozTransform = es.OTransform = es.transform = 'translate3d(0,'+translate+'px,-'+translate+'px) scaleY(' + scale + ')';
+
+        }
+      },
+	
+	   onSetTransition: function(swiper, speed) {
+        for (var i = 0; i < swiper.slides.length; i++){
+          es = swiper.slides[i].style;
+		  es.webkitTransitionDuration = es.MsTransitionDuration = es.msTransitionDuration = es.MozTransitionDuration = es.OTransitionDuration = es.transitionDuration = speed + 'ms';
+
+        }
+      },
+	
+	
+	
+	   })         
+</script>
+</body>
+</html>
