@@ -1,0 +1,299 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <meta content="yes" name="apple-mobile-web-app-capable"/>
+    <meta content="yes" name="apple-touch-fullscreen"/>
+    <meta content="telephone=no,email=no" name="format-detection"/>
+    <meta name="viewport" content="width=device-width, user-scalble=no, initial-scale=1.0，maximum-scale=1.0，mininum-scale=1.0">
+
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/swiper.min.css">
+
+    <script src="js/swiper.min.js"></script>
+    <script src="js/zepto.min.js"></script>
+    <script>
+        $(function (){
+            function toDub(n)
+            {
+                return n<10 ? '0'+n : ''+n;
+            }
+            tick();
+            setInterval(tick,1000);
+            function tick()
+            {
+                var oTarget=new Date();
+                oTarget.setDate(20);
+                oTarget.setHours(20,0,0);
+                var oNow=new Date();
+                var total=parseInt((oTarget.getTime()-oNow.getTime())/1000);
+                var d=parseInt(total/86400);
+                total%=86400;
+                var h=parseInt(total/3600);
+                total%=3600;
+                var m=parseInt(total/60);
+                total%=60;
+                var s=total;
+                $('.time .h').html(toDub(d*24+h));
+                $('.time .m').html(toDub(m));
+                $('.time .s').html(toDub(s));
+            }
+
+        })
+    </script>
+</head>
+<body style="background: #eee;">
+<script>
+    (function(global){
+        function remChange(){
+            document.documentElement.style.fontSize=20*document.documentElement.clientWidth/320+'px';
+        }
+        remChange();
+        global.addEventListener('resize',remChange,false);
+    })(window);
+</script>
+<header>
+    <div class="header_box">
+        <span class="tao_icon"></span>
+        <div class="placeholder">
+            <p>
+                <i class="search_icon"></i>寻找宝贝店铺
+            </p>
+        </div>
+    </div>
+</header>
+
+<!-- 焦点图 -->
+<div class="banner_box">
+    <div class="swiper-container" id="banner">
+        <div class="swiper-wrapper">
+            <div class="swiper-slide"><a href="#"><img src="images/1.jpg" width="100%" alt=""></a></div>
+            <div class="swiper-slide"><a href="#"><img src="images/2.jpg" width="100%" alt=""></a></div>
+            <div class="swiper-slide"><a href="#"><img src="images/3.jpg" width="100%" alt=""></a></div>
+            <div class="swiper-slide"><a href="#"><img src="images/4.jpg" width="100%" alt=""></a></div>
+            <div class="swiper-slide"><a href="#"><img src="images/5.jpg" width="100%" alt=""></a></div>
+            <div class="swiper-slide"><a href="#"><img src="images/6.jpg" width="100%" alt=""></a></div>
+            <div class="swiper-slide"><a href="#"><img src="images/7.jpg" width="100%" alt=""></a></div>
+            <div class="swiper-slide"><a href="#"><img src="images/8.jpg" width="100%" alt=""></a></div>
+
+
+        </div>
+        <!-- Add Pagination -->
+        <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- Initialize Swiper -->
+    <script>
+        var swiper = new Swiper('#banner', {
+            pagination: '.swiper-pagination',
+            paginationClickable: true,
+            autoplay: 2500,
+            spaceBetween: 200,
+            loop: true
+        });
+    </script>
+</div>
+
+<!-- 导航 -->
+<div class="nav_box">
+    <div class="nav">
+        <ul class="clearfix">
+            <li class="nav_menu">
+                <a href="#">
+                    <div class="pic">
+                        <img src="images/icon1.png" width="100%" alt="">
+                    </div>
+                    <div class="txt">
+                        <span>天猫</span>
+                    </div>
+                </a>
+            </li>
+            <li class="nav_menu">
+                <a href="#">
+                    <div class="pic">
+                        <img src="images/icon2.png" width="100%" alt="">
+                    </div>
+                    <div class="txt">
+                        <span>聚划算</span>
+                    </div>
+                </a>
+            </li>
+            <li class="nav_menu">
+                <a href="#">
+                    <div class="pic">
+                        <img src="images/icon3.png" width="100%" alt="">
+                    </div>
+                    <div class="txt">
+                        <span>天猫国际</span>
+                    </div>
+                </a>
+            </li>
+            <li class="nav_menu">
+                <a href="#">
+                    <div class="pic">
+                        <img src="images/icon4.png" width="100%" alt="">
+                    </div>
+                    <div class="txt">
+                        <span>外卖</span>
+                    </div>
+                </a>
+            </li>
+            <li class="nav_menu">
+                <a href="#">
+                    <div class="pic">
+                        <img src="images/icon5.png" width="100%" alt="">
+                    </div>
+                    <div class="txt">
+                        <span>天猫超市</span>
+                    </div>
+                </a>
+            </li>
+            <li class="nav_menu">
+                <a href="#">
+                    <div class="pic">
+                        <img src="images/icon6.png" width="100%" alt="">
+                    </div>
+                    <div class="txt">
+                        <span>充值中心</span>
+                    </div>
+                </a>
+            </li>
+            <li class="nav_menu">
+                <a href="#">
+                    <div class="pic">
+                        <img src="images/icon7.png" width="100%" alt="">
+                    </div>
+                    <div class="txt">
+                        <span>阿里旅行</span>
+                    </div>
+                </a>
+            </li>
+            <li class="nav_menu">
+                <a href="#">
+                    <div class="pic">
+                        <img src="images/icon8.png" width="100%" alt="">
+                    </div>
+                    <div class="txt">
+                        <span>领金币</span>
+                    </div>
+                </a>
+            </li>
+            <li class="nav_menu">
+                <a href="#">
+                    <div class="pic">
+                        <img src="images/icon9.png" width="100%" alt="">
+                    </div>
+                    <div class="txt">
+                        <span>到家</span>
+                    </div>
+                </a>
+            </li>
+            <li class="nav_menu">
+                <a href="#">
+                    <div class="pic">
+                        <img src="images/icon10.png" width="100%" alt="">
+                    </div>
+                    <div class="txt">
+                        <span>分类</span>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<!--  淘宝头条 -->
+
+<div class="news_box">
+    <div class="swiper-container" id="newslist">
+        <ul class="swiper-wrapper">
+            <li class="swiper-slide news_list clearfix">
+                <a href="#">
+                    <div class="news_icon fl"></div>
+                    <div class="news_txt fl">
+                        <span class="txt_flag font05">最新</span>
+                        <span class="txt">剁手清单，那些让直男一秒惊艳的口红！</span>
+                    </div>
+                </a>
+
+            </li>
+            <li class="swiper-slide news_list clearfix">
+                <a href="#">
+                    <div class="news_icon fl"></div>
+                    <div class="news_txt fl">
+                        <span class="txt_flag font05">最新</span>
+                        <span class="txt">《火影》角色在《龙珠》就是渣？</span>
+                    </div>
+                </a>
+
+            </li>
+            <li class="swiper-slide news_list clearfix">
+                <a href="#">
+                    <div class="news_icon fl"></div>
+                    <div class="news_txt fl">
+                        <span class="txt_flag font05">最新</span>
+                        <span class="txt">一款美丽的包包衬托你的气质！</span>
+                    </div>
+                </a>
+
+            </li>
+            <li class="swiper-slide news_list clearfix">
+                <a href="#">
+                    <div class="news_icon fl"></div>
+                    <div class="news_txt fl">
+                        <span class="txt_flag font05">最新</span>
+                        <span class="txt">浓情法式蓝瘦香菇，吃了不再</span>
+                    </div>
+                </a>
+
+            </li>
+
+        </ul>
+    </div>
+</div>
+
+<script>
+    var swiper = new Swiper('#newslist', {
+        autoplay: 2500,
+        direction: 'vertical',
+        loop: true
+    });
+</script>
+
+<!-- 淘抢购 -->
+<div class="common_bg">
+    <div class="tao_box1 clearfix">
+        <div class="left fl">
+            <a href="#">
+                <div class="pic">
+                    <img src="images/pic1.jpg" width="100%" alt="">
+                </div>
+                <div class="time">
+                    <span class="num h">00</span>
+                    <span class="dot">:</span>
+                    <span class="num m">00</span>
+                    <span class="dot">:</span>
+                    <span class="num s">00</span>
+
+                </div>
+            </a>
+        </div>
+        <div class="right fl">
+            <dl>
+                <dt class="clearfix">
+                    <a href="#" class="fl"><img src="images/pic2.jpg" width="100%" alt=""></a>
+                    <a href="#" class="fr"><img src="images/pic2_1.png" width="100%" alt=""></a>
+                </dt>
+                <dd class="fl">
+                    <a href="#" class="fl"><img src="images/pic3.png" width="100%" alt=""></a>
+                </dd>
+                <dd class="fl last">
+                    <a href="#" class="fl"><img src="images/pic4.png" width="100%" alt=""></a>
+                </dd>
+            </dl>
+        </div>
+    </div>
+</div>
+</body>
+</html>
