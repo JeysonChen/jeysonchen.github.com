@@ -48,20 +48,7 @@
             var top=$header.offset().top;
             scrollTop=$(window).scrollTop();
             var $back= $('.back_top');
-            $(window).scroll(function (){
-                if(top<scrollTop)
-                {
-                    $header.css('position','fixed');
-                    $box1.show();
-                }
-                else
-                {
-                    $header.css('position','');
-                    $box1.hide();
-                }
-
-            })
-
+           
             //返回顶部
             $back.tap(function (){
                 $(window).scrollTop(0);
@@ -69,6 +56,20 @@
 
 			//懒加载
             $(document).bind('scroll',function (){
+				
+				//吸顶条
+				
+				if(top<scrollTop)
+				{
+					$header.css('position','fixed');
+					$box1.show();
+				}
+				else
+				{
+					$header.css('position','');
+					$box1.hide();
+				}
+					
                 var $win_h=parseInt($(window).height());
                 //alert($win_h);
                 var scroll = parseInt($(window).scrollTop());
