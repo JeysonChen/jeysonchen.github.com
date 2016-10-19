@@ -65,7 +65,7 @@ body,html { height:100%;}
 	height:100%;
 	
 }
-.page { width:16rem; height:100%; text-align:center; background:url(../images/%E9%9A%90%E7%A7%811.jpg) 50% 50% no-repeat; background-size:contain; overflow:hidden; }
+.page { width:16rem; height:100%; text-align:center; background:url(../images/%E9%9A%90%E7%A7%811.jpg) 50% 50% no-repeat; background-size:cover; overflow:hidden; }
 
 .page1 header { padding-top:6.825rem; width:100%;  }
 .page1 header h4 { border:1px solid #fff; width:13.35rem; height:0; margin:0 auto; position:relative;}
