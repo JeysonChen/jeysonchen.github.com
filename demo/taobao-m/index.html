@@ -67,18 +67,24 @@
                 $(window).scrollTop(0);
             })
 
-            var $win_h=$(window).height();
-            $(window).bind('swipeDown',function (){
-                $('img').each(function (){
-                    var top= $(this).offset().top;
-                    var _src=$(this).attr('url');
-                    if(top<($win_h+scrollTop) && _src )
+			//懒加载
+            $(document).bind('scroll',function (){
+                var $win_h=parseInt($(window).height());
+                //alert($win_h);
+                var scroll = parseInt($(window).scrollTop());
+
+                t=scroll+$win_h;
+                $('img').each(function (i){
+                    var top=parseInt($('img').eq(i).offset().top) ;
+                    var _src=$('img').eq(i).attr('url');
+                    //alert(_src);
+
+                    if(top<=t && _src )
                     {
-                        $(this).attr('src',_src);
+                        $('img').eq(i).attr('src',_src);
                     }
                 })
-            }).trigger('swipeDown');
-
+            });
 
         })
 
