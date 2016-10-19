@@ -102,8 +102,8 @@ header { width:100%; background:#FE5400; top:0; left:0; height:37px; z-index: 99
 
 /* 天猫必逛 特色好吃 */
 .tao_box3 { }
-.tao_box3 .tao_txt .top li { width:7.95rem; }
-.tao_box3 .tao_txt .top li img { width:7.95rem;}
+.tao_box3 .tao_txt .top li { width:7.95rem; border-bottom: 1px solid #e9e9e9;}
+.tao_box3 .tao_txt .top li img { width:7.94rem; }
 .tao_box3 .tao_txt .bottom  { }
 .tao_box3 .tao_txt .bottom li { width:3.95rem;}
 .tao_box3 .tao_txt .bottom li img { width:3.95rem;}
