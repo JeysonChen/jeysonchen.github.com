@@ -25,8 +25,8 @@
             function tick()
             {
                 var oTarget=new Date();
-                oTarget.setDate(20);
-                oTarget.setHours(20,0,0);
+                oTarget.setDate(oTarget.getDate()+1);
+                oTarget.setHours(23,0,0);
                 var oNow=new Date();
                 var total=parseInt((oTarget.getTime()-oNow.getTime())/1000);
                 var d=parseInt(total/86400);
