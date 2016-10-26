@@ -56,19 +56,7 @@
 
 			//懒加载
             $(document).bind('scroll',function (){
-				
-				//吸顶条
-				
-				if(top<scrollTop)
-				{
-					$header.css('position','fixed');
-					$box1.show();
-				}
-				else
-				{
-					$header.css('position','');
-					$box1.hide();
-				}
+
 					
                 var $win_h=parseInt($(window).height());
                 //alert($win_h);
@@ -111,7 +99,7 @@
         </div>
     </div>
 </header>
-<div class="box1"></div>
+
 
 <!-- 焦点图 -->
 <div class="banner_box">
